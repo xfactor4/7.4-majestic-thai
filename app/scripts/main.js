@@ -1,12 +1,8 @@
-import BooksCollection from 'models/books-collection';
-import CreateBookView from 'views/books/create';
-
-window.App = {};
+import MenuRouter from 'router';
 
 $(document).ready(function(){
-  App.books = new BooksCollection();
 
-  window.createBookView = new CreateBookView();
-  $('#container').append(createBookView.render().el);
-  
+  window.menuRouter = new MenuRouter();
+  Backbone.history.start();
+
 });
